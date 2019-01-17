@@ -1,1 +1,6 @@
-<h1>HELLO THERE!</h1>
+{% for mypost in posts %}
+    <div>
+        <a href = "">{{ mypost.title }}</a>
+        <p> {{ mypost.text }}</p>
+    </div>
+{% endfor %}
