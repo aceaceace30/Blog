@@ -1,6 +1,14 @@
+{% extends 'myblog/base.html' %}
+{% load static %}
+
+
+
+{% block content%}
 {% for mypost in posts %}
     <div>
-        <a href = "">{{ mypost.title }}</a>
+        <h1><a href = "{% url 'post_detail' id=mypost.id %}">{{ mypost.title }}</a></h1>
         <p> {{ mypost.text }}</p>
     </div>
 {% endfor %}
+
+{% endblock%}
